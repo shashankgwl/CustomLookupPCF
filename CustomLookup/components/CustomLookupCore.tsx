@@ -1,10 +1,8 @@
 import * as React from 'react'
 import { ShimmeredDetailsList, Fabric, StackItem, Link, PrimaryButton, Modal, IColumn, Text, SelectionMode, TextField } from 'office-ui-fabric-react/lib'
-import { FontWeights, IconButton, IStackItemTokens, IStackTokens, Stack } from '@fluentui/react'
+import { FontWeights, IconButton, Stack } from '@fluentui/react'
 import { mergeStyleSets, getTheme } from 'office-ui-fabric-react';
 import { IJsonContext, IDynamicsColumn, ILookupData, ILookupState, IPageContext } from './LookupState';
-import { lookup } from 'dns';
-import { type } from 'os';
 import { initializeIcons } from '@uifabric/icons';
 
 export default function CustomLookupCore(props: IPageContext) {
@@ -23,7 +21,6 @@ export default function CustomLookupCore(props: IPageContext) {
     initializeIcons();
 
     const theme = getTheme();
-    const lookupData: any = {};
     const contentStyles = mergeStyleSets({
         container: {
             display: 'flex',
@@ -57,10 +54,6 @@ export default function CustomLookupCore(props: IPageContext) {
         },
     });
 
-    const stackItemTokens: IStackItemTokens = {
-        margin: "0,0,0,50",
-        padding: 10,
-    };
 
 
     async function getWebResource(url: string) {
