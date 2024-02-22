@@ -1,0 +1,1 @@
+##This is a PCF control built using Fabric React library and TypeScript. This PCF controls can be used to replace the OOB lookup PCF control with one that opens a center dialog box and provides a tablular view of records with client side filtering and sorting.
